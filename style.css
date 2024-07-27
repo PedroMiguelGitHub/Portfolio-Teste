@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:wght@100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --font-roboto: 'Roboto mono',sans-serif;
+    --branco: #f1f1f1;
+    --azul: #6EACDA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--branco);
+}
+
+.header__menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4rem;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.menu-principal-container {
+    display: flex;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 2rem;
+    font-size: 26px;
+}
+
+.menu__item {
+    transition: all .2s;
+    position: relative;
+}
+
+.menu__item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--azul);
+    transition: all .2s;
+}
+
+.menu__item:hover::after {
+    width: 100%;
+}
+
+.menu__item:hover,
+.links a:hover {
+    color: var(--azul);
+}
+
+.button {
+    padding: 12px 16px;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-size: 26px;
+    border-radius: 8px;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.button_icon {
+    display: none;
+    padding: 12px 16px;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-size: 26px;
+    border-radius: 8px;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--azul);
+    transform: scale(105%);
+}
+
+.button_icon:hover {
+    background-color: var(--azul);
+    transform: scale(105%);
+}
+
+.inicio {
+    padding: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inicio img {
+    width: 40rem;
+    box-shadow: 0 0 70px rgb(255, 255, 255, 255);
+    animation: img 3s infinite;
+}
+
+/*Isso aqui eu usei o chat-GPT porque vi em um vídeo 
+e achei muito daora,_,*/
+
+@keyframes img {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.inicio__itens strong {
+    font-size: 26px;
+}
+
+.inicio__itens h1 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.inicio__itens p {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.sobre_mim {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 10%;
+    align-items: center;
+}
+
+.sobre_mim img {
+    width: 30%;
+}
+
+.sobre_mim__text {
+    width: 60%;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sobre_mim__text h2 {
+    font-size: 96px;
+    font-weight: 500;
+    font-family: var(--font-roboto);
+}
+
+.sobre_mim__text p {
+    font-size: 26px;
+}
+
+.divisor {
+    padding: 5% 10%;
+    font-size: 36px;
+    font-weight: 500;
+    font-family: var(--font-roboto);
+}
+
+.projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0 10%;
+}
+
+.projetos__todo {
+    padding: 20px;
+    width: 330px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.projetos__todo:hover {
+    box-shadow: none;
+}
+
+.projetos__todo img {
+    width: 100%;
+    height: 280px;
+    border-radius: 18px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.item h4 {
+    font-size: 26px;
+    font-weight: 500;
+    font-family: var(--font-roboto);
+}
+
+.item p {
+    width: 90%;
+    font-size: 18px;
+}
+
+.projetos__item {
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--branco);
+}
+
+.obter {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.obter a {
+    background: var(--branco);
+    padding: 5px 10px;
+    border-radius: 16px;
+    transition: all .4s ease;
+}
+
+.obter a:hover {
+    background: #d8d8d8;
+    transform: scale(105%);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+    margin-top: 50px;
+    padding: 100px 80px;
+    font-family: var(--font-roboto);
+}
+
+footer h5 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 500;
+    width: 50%;
+}
+
+.midia {
+    color: #d8d8d8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.midia p {
+    font-size: 28px;
+    font-weight: 300;
+    border-bottom: 1px solid #413F42;
+}
+
+.links a {
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    transition: all .2s;
+}
+
+@media screen and (max-width: 1380px) {
+    
+    .inicio__itens h1 {
+        font-size: 52px;
+    }
+
+    .inicio__itens p {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1380px) {
+    
+    .inicio__itens h1 {
+        font-size: 42px;
+    }
+
+    .inicio__itens p {
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 1080px) {
+
+    .inicio img {
+        width: 30rem;
+    }
+
+    .sobre_mim__text h2 {
+        font-size: 80px;
+    }
+
+    .sobre_mim__text p {
+        font-size: 24px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    
+    .inicio img {
+        width: 25rem;
+    }
+
+    .sobre_mim__text h2 {
+        font-size: 64px;
+    }
+
+    .sobre_mim__text p {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 856px) {
+
+    .menu__item {
+        font-size: 18px;
+    }
+
+    .button {
+        font-size: 20px;
+    }
+
+    .inicio__itens h1 {
+        font-size: 36px;
+    }
+
+    .menu__img {
+        display: block;
+    }
+
+    .sobre_mim__text h2 {
+        font-size: 46px;
+    }
+
+    .sobre_mim__text p {
+        font-size: 18px;
+    }
+
+    .projetos__todo {
+        width: 300px;
+    }
+
+    footer h5 {
+        font-size: 36px;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+    
+    .logo {
+        font-size: 32px;
+    }
+
+    .inicio img {
+        width: 350px;
+    }
+
+    .projetos {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .projetos__todo {
+        width: 330px;
+    }
+
+}
+
+@media screen and (max-width: 665px) {
+
+    .header__menu {
+        padding: 0 2rem;
+    }
+
+    .inicio,
+    .sobre_mim,
+    .divisor {
+        padding: 4rem 2rem;
+    }
+
+    .sobre_mim {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .sobre_mim p {
+        font-size: 22px;
+    }
+
+    .button {
+        font-size: 16px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer h5 {
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    
+}
+
+@media screen and (max-width: 579px) {
+
+    .button {
+        display: none;
+    }
+
+    .button_icon {
+        display: block;
+        border-radius: 50px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    .inicio img {
+        width: 250px;
+    }
+
+    .sobre_mim__text h2 {
+        font-size: 36px;
+    }
+
+    footer h5 {
+        font-size: 32px;
+    }
+    
+}
+
+@media screen and (max-width: 475px) {
+
+    .inicio {
+        flex-direction: column-reverse;
+    }
+
+    .sobre_mim {
+        padding: 0;
+    }
+    
+}
